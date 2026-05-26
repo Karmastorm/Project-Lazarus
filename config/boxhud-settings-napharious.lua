@@ -1,252 +1,169 @@
 return {
 	['Transparency'] = false,
-	['Properties'] = {
-		['Me.PctAAExp'] = {
-			['Inverse'] = false,
-			['Type'] = 'NetBots',
-			['Name'] = 'Me.PctAAExp',
-		},
-		['Me.PctMana'] = {
-			['Type'] = 'Observed',
-			['Name'] = 'Me.PctMana',
-		},
-		['Me.Level'] = {
-			['Type'] = 'Observed',
-			['Name'] = 'Me.Level',
-		},
-		['Macro.Paused'] = {
-			['Type'] = 'Observed',
-			['Name'] = 'Macro.Paused',
-		},
-		['Me.PctHPs'] = {
-			['Type'] = 'Observed',
-			['Name'] = 'Me.PctHPs',
-		},
-		['Me.ActiveDisc.Name'] = {
-			['Type'] = 'Observed',
-			['Name'] = 'Me.ActiveDisc.Name',
-		},
-		['Macro.Name'] = {
-			['Type'] = 'Observed',
-			['Name'] = 'Macro.Name',
-		},
-		['Me.PctEndurance'] = {
-			['Type'] = 'Observed',
-			['Name'] = 'Me.PctEndurance',
-		},
-		['Me.PctExp'] = {
-			['Type'] = 'Observed',
-			['Name'] = 'Me.PctExp',
-		},
-		['Distance3D'] = {
-			['Type'] = 'Spawn',
-			['Name'] = 'Distance3D',
-		},
-		['Me.AAPoints'] = {
-			['Type'] = 'Observed',
-			['Name'] = 'Me.AAPoints',
-		},
-		['Target.CleanName'] = {
-			['Type'] = 'Observed',
-			['Name'] = 'Target.CleanName',
-		},
-		['Me.Casting.Name'] = {
-			['Type'] = 'Observed',
-			['Name'] = 'Me.Casting.Name',
-		},
-		['Me.Class.ShortName'] = {
-			['Type'] = 'Observed',
-			['Name'] = 'Me.Class.ShortName',
-		},
-	},
-	['PeerSource'] = 'dannet',
-	['StaleDataTimeout'] = 30,
+	['RefreshInterval'] = 250,
 	['Columns'] = {
-		['HP%'] = {
-			['InZone'] = false,
-			['Thresholds'] = {
-				[1] = 35,
-				[2] = 70,
-			},
-			['Name'] = 'HP%',
-			['Ascending'] = true,
-			['Properties'] = {
-				['all'] = 'Me.PctHPs',
-			},
-			['Type'] = 'property',
-			['Percentage'] = true,
-		},
-		['MP%'] = {
-			['InZone'] = false,
-			['Thresholds'] = {
-				[1] = 35,
-				[2] = 70,
-			},
-			['Name'] = 'MP%',
-			['Ascending'] = true,
-			['Properties'] = {
-				['all'] = 'Me.PctMana',
-			},
-			['Type'] = 'property',
-			['Percentage'] = true,
-		},
-		['EP%'] = {
-			['InZone'] = false,
-			['Thresholds'] = {
-				[1] = 35,
-				[2] = 70,
-			},
-			['Name'] = 'EP%',
-			['Ascending'] = true,
-			['Properties'] = {
-				['all'] = 'Me.PctEndurance',
-			},
-			['Type'] = 'property',
-			['Percentage'] = true,
-		},
 		['Distance'] = {
-			['InZone'] = true,
+			['Properties'] = {
+				['all'] = 'Distance3D',
+			},
 			['Thresholds'] = {
 				[1] = 100,
 				[2] = 200,
 			},
 			['Name'] = 'Distance',
-			['Ascending'] = false,
-			['Properties'] = {
-				['all'] = 'Distance3D',
-			},
-			['Type'] = 'property',
-			['Percentage'] = false,
-		},
-		['Target'] = {
 			['InZone'] = true,
-			['Properties'] = {
-				['all'] = 'Target.CleanName',
-			},
-			['Name'] = 'Target',
+			['Ascending'] = false,
 			['Type'] = 'property',
 			['Percentage'] = false,
-		},
-		['Spell/Disc'] = {
-			['InZone'] = false,
-			['Properties'] = {
-				['all'] = 'Me.Casting.Name',
-				['melee'] = 'Me.ActiveDisc.Name',
-			},
-			['Name'] = 'Spell/Disc',
-			['Type'] = 'property',
-			['Percentage'] = false,
-		},
-		['Paused'] = {
-			['Mappings'] = {
-				['FALSE'] = '',
-				['TRUE'] = 'PAUSED',
-			},
-			['Type'] = 'property',
-			['Name'] = 'Paused',
-			['InZone'] = false,
-			['Properties'] = {
-				['all'] = 'Macro.Paused',
-			},
-			['Percentage'] = false,
-		},
-		['Macro'] = {
-			['InZone'] = false,
-			['Properties'] = {
-				['all'] = 'Macro.Name',
-			},
-			['Name'] = 'Macro',
-			['Type'] = 'property',
-			['Percentage'] = false,
-		},
-		['Name'] = {
-			['InZone'] = false,
-			['Type'] = 'property',
-			['Name'] = 'Name',
-			['IncludeLevel'] = false,
-			['Percentage'] = false,
-		},
-		['Pause'] = {
-			['Action'] = '/dex #botName# /mqp',
-			['Type'] = 'button',
-			['Name'] = 'Pause',
-		},
-		['Exp%'] = {
-			['InZone'] = false,
-			['Thresholds'] = {
-				[1] = 33,
-				[2] = 66,
-			},
-			['Name'] = 'Exp%',
-			['Ascending'] = true,
-			['Properties'] = {
-				['all'] = 'Me.PctExp',
-			},
-			['Type'] = 'property',
-			['Percentage'] = true,
 		},
 		['AA Unspent'] = {
-			['InZone'] = false,
+			['Properties'] = {
+				['all'] = 'Me.AAPoints',
+			},
 			['Thresholds'] = {
 				[1] = 50,
 				[2] = 100,
 			},
 			['Name'] = 'AA Unspent',
+			['InZone'] = false,
 			['Ascending'] = false,
+			['Type'] = 'property',
+			['Percentage'] = false,
+		},
+		['Target'] = {
 			['Properties'] = {
-				['all'] = 'Me.AAPoints',
+				['all'] = 'Target.CleanName',
 			},
+			['Name'] = 'Target',
+			['InZone'] = true,
 			['Type'] = 'property',
 			['Percentage'] = false,
 		},
 		['AA%'] = {
-			['InZone'] = true,
+			['Properties'] = {
+				['all'] = 'Me.PctAAExp',
+			},
 			['Thresholds'] = {
 				[1] = 33,
 				[2] = 66,
 			},
-			['OwnColor'] = false,
-			['Prettify'] = false,
-			['Percentage'] = true,
 			['Name'] = 'AA%',
+			['InZone'] = false,
+			['Ascending'] = true,
+			['Type'] = 'property',
+			['Percentage'] = true,
+		},
+		['Spell/Disc'] = {
 			['Properties'] = {
-				['all'] = 'Me.PctAAExp',
+				['melee'] = 'Me.ActiveDisc.Name',
+				['all'] = 'Me.Casting.Name',
+			},
+			['Name'] = 'Spell/Disc',
+			['InZone'] = false,
+			['Type'] = 'property',
+			['Percentage'] = false,
+		},
+		['Pause'] = {
+			['Name'] = 'Pause',
+			['Action'] = '/dex #botName# /mqp',
+			['Type'] = 'button',
+		},
+		['Macro'] = {
+			['Properties'] = {
+				['all'] = 'Macro.Name',
+			},
+			['Name'] = 'Macro',
+			['InZone'] = false,
+			['Type'] = 'property',
+			['Percentage'] = false,
+		},
+		['Paused'] = {
+			['Properties'] = {
+				['all'] = 'Macro.Paused',
+			},
+			['Name'] = 'Paused',
+			['InZone'] = false,
+			['Mappings'] = {
+				['TRUE'] = 'PAUSED',
+				['FALSE'] = '',
 			},
 			['Type'] = 'property',
+			['Percentage'] = false,
+		},
+		['HP%'] = {
+			['Properties'] = {
+				['all'] = 'Me.PctHPs',
+			},
+			['Thresholds'] = {
+				[1] = 35,
+				[2] = 70,
+			},
+			['Name'] = 'HP%',
+			['InZone'] = false,
 			['Ascending'] = true,
+			['Type'] = 'property',
+			['Percentage'] = true,
+		},
+		['Exp%'] = {
+			['Properties'] = {
+				['all'] = 'Me.PctExp',
+			},
+			['Thresholds'] = {
+				[1] = 33,
+				[2] = 66,
+			},
+			['Name'] = 'Exp%',
+			['InZone'] = false,
+			['Ascending'] = true,
+			['Type'] = 'property',
+			['Percentage'] = true,
+		},
+		['MP%'] = {
+			['Properties'] = {
+				['all'] = 'Me.PctMana',
+			},
+			['Thresholds'] = {
+				[1] = 35,
+				[2] = 70,
+			},
+			['Name'] = 'MP%',
+			['InZone'] = false,
+			['Ascending'] = true,
+			['Type'] = 'property',
+			['Percentage'] = true,
+		},
+		['Name'] = {
+			['InZone'] = false,
+			['Name'] = 'Name',
+			['IncludeLevel'] = false,
+			['Type'] = 'property',
+			['Percentage'] = false,
+		},
+		['EP%'] = {
+			['Properties'] = {
+				['all'] = 'Me.PctEndurance',
+			},
+			['Thresholds'] = {
+				[1] = 35,
+				[2] = 70,
+			},
+			['Name'] = 'EP%',
+			['InZone'] = false,
+			['Ascending'] = true,
+			['Type'] = 'property',
+			['Percentage'] = true,
 		},
 		['End'] = {
+			['Name'] = 'End',
 			['Action'] = '/dex #botName# /end',
 			['Type'] = 'button',
-			['Name'] = 'End',
 		},
 	},
+	['DanNetPeerGroup'] = 'zone',
+	['PeerSource'] = 'dannet',
+	['SchemaVersion'] = 2,
+	['StaleDataTimeout'] = 30,
 	['Colors'] = {
-		['InZone'] = {
-			[1] = 0,
-			[2] = 1,
-			[3] = 0,
-		},
-		['Invis'] = {
-			[1] = 0.25999999046325684,
-			[2] = 0.9800000190734863,
-			[3] = 0.9800000190734863,
-		},
-		['IVU'] = {
-			[1] = 0.949999988079071,
-			[2] = 0.9800000190734863,
-			[3] = 0.25999999046325684,
-		},
-		['DoubleInvis'] = {
-			[1] = 0.6800000071525574,
-			[2] = 0.9800000190734863,
-			[3] = 0.9800000190734863,
-		},
-		['NotInZone'] = {
-			[1] = 1,
-			[2] = 0,
-			[3] = 0,
-		},
 		['Default'] = {
 			[1] = 1,
 			[2] = 1,
@@ -277,7 +194,61 @@ return {
 			[2] = 0,
 			[3] = 0,
 		},
+		['InZone'] = {
+			[1] = 0,
+			[2] = 1,
+			[3] = 0,
+		},
+		['Invis'] = {
+			[1] = 0.25999999999999995,
+			[2] = 0.98,
+			[3] = 0.98,
+		},
+		['IVU'] = {
+			[1] = 0.95,
+			[2] = 0.98,
+			[3] = 0.25999999999999995,
+		},
+		['DoubleInvis'] = {
+			[1] = 0.6799999999999999,
+			[2] = 0.98,
+			[3] = 0.98,
+		},
+		['NotInZone'] = {
+			[1] = 1,
+			[2] = 0,
+			[3] = 0,
+		},
 	},
+	['Windows'] = {
+		['default'] = {
+			['Transparency'] = false,
+			['Locked'] = true,
+			['CurrentTab'] = 'XP',
+			['SortDirty'] = true,
+			['SavePos'] = true,
+			['pos'] = {
+				['y'] = 516,
+				['x'] = 7,
+			},
+			['PeerGroup'] = 'zone',
+			['AutoScaleHeight'] = false,
+			['Name'] = 'default',
+			['RoundedEdges'] = false,
+			['OverrideWindowName'] = false,
+			['size'] = {
+				['h'] = 209,
+				['w'] = 689,
+			},
+			['Tabs'] = {
+				[1] = 'General',
+				[2] = 'Macros',
+				[3] = 'XP',
+			},
+			['TitleBar'] = false,
+		},
+	},
+	['TitleBar'] = false,
 	['Tabs'] = {
 		[1] = {
 			['Name'] = 'General',
@@ -306,41 +277,67 @@ return {
 			['Columns'] = {
 				[1] = 'Name',
 				[2] = 'Exp%',
-				[3] = 'AA Unspent',
-				[4] = 'AA%',
+				[3] = 'AA%',
+				[4] = 'AA Unspent',
 			},
 		},
 	},
-	['SchemaVersion'] = 2,
-	['Windows'] = {
-		['default'] = {
-			['Transparency'] = true,
-			['Locked'] = true,
-			['SortDirty'] = true,
-			['AutoScaleHeight'] = false,
-			['SavePos'] = true,
-			['pos'] = {
-				['y'] = 516,
-				['x'] = 8,
-			},
-			['Tabs'] = {
-				[1] = 'General',
-				[2] = 'Macros',
-				[3] = 'XP',
-			},
-			['PeerGroup'] = 'zone',
-			['Name'] = 'default',
-			['RoundedEdges'] = false,
-			['CurrentTab'] = 'General',
-			['size'] = {
-				['h'] = 184,
-				['w'] = 689,
-			},
-			['OverrideWindowName'] = false,
-			['TitleBar'] = false,
+	['Properties'] = {
+		['Me.PctExp'] = {
+			['Type'] = 'Observed',
+			['Name'] = 'Me.PctExp',
+		},
+		['Distance3D'] = {
+			['Type'] = 'Spawn',
+			['Name'] = 'Distance3D',
+		},
+		['Me.AAPoints'] = {
+			['Type'] = 'Observed',
+			['Name'] = 'Me.AAPoints',
+		},
+		['Target.CleanName'] = {
+			['Type'] = 'Observed',
+			['Name'] = 'Target.CleanName',
+		},
+		['Me.PctAAExp'] = {
+			['Type'] = 'Observed',
+			['Name'] = 'Me.PctAAExp',
+		},
+		['Me.Casting.Name'] = {
+			['Type'] = 'Observed',
+			['Name'] = 'Me.Casting.Name',
+		},
+		['Me.ActiveDisc.Name'] = {
+			['Type'] = 'Observed',
+			['Name'] = 'Me.ActiveDisc.Name',
+		},
+		['Macro.Name'] = {
+			['Type'] = 'Observed',
+			['Name'] = 'Macro.Name',
+		},
+		['Macro.Paused'] = {
+			['Type'] = 'Observed',
+			['Name'] = 'Macro.Paused',
+		},
+		['Me.PctHPs'] = {
+			['Type'] = 'Observed',
+			['Name'] = 'Me.PctHPs',
+		},
+		['Me.Level'] = {
+			['Type'] = 'Observed',
+			['Name'] = 'Me.Level',
+		},
+		['Me.PctMana'] = {
+			['Type'] = 'Observed',
+			['Name'] = 'Me.PctMana',
+		},
+		['Me.Class.ShortName'] = {
+			['Type'] = 'Observed',
+			['Name'] = 'Me.Class.ShortName',
+		},
+		['Me.PctEndurance'] = {
+			['Type'] = 'Observed',
+			['Name'] = 'Me.PctEndurance',
 		},
 	},
-	['TitleBar'] = false,
-	['RefreshInterval'] = 250,
-	['DanNetPeerGroup'] = 'zone',
 }

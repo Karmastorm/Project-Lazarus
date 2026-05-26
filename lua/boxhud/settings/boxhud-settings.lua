@@ -179,6 +179,16 @@ return {
             Percentage=false,
             Ascending=false,
             InZone=false
+        },
+        ['AA%'] = {
+            Type='property',
+            Properties={
+                all='Me.PctAAExp'
+            },
+            Thresholds={33,66},
+            Percentage=true,
+            Ascending=true,
+            InZone=false
         }
         --[[ Example columns
         ['Macro'] = {
@@ -303,6 +313,7 @@ return {
             Columns = {
                 'Name',
                 'Exp%',
+                'AA%',
                 'AA Unspent'
             }
         }
@@ -340,6 +351,7 @@ return {
         ['Macro.Name'] = { Type='Observed' },
         ['Macro.Paused'] = { Type='Observed' },
         ['Me.PctExp'] = { Type='Observed' },
+        ['Me.PctAAExp'] = { Type='Observed' },
         ['Me.AAPoints'] = { Type='Observed' },
         ['Distance3D'] = { Type='Spawn' }
         -- Other example properties
