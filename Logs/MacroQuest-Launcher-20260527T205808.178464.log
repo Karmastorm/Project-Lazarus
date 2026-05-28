@@ -1,0 +1,3 @@
+D 2026-05-27 20:58:08.179091 [MQ] Logging Initialized (C:\actions-runner\_work\macroquest\macroquest\src\loader\MacroQuest.cpp:375)
+I 2026-05-27 20:58:08.179163 [MQ] Starting MacroQuest Loader. Built Sun Jan  4 18:57:00 2026 (C:\actions-runner\_work\macroquest\macroquest\src\loader\MacroQuest.cpp:1820)
+I 2026-05-27 20:58:08.192906 [MQ] Relaunching as spawned process (C:\actions-runner\_work\macroquest\macroquest\src\loader\MacroQuest.cpp:1895)

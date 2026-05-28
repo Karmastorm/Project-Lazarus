@@ -1,0 +1,31 @@
+D 2026-05-27 20:58:08.302204 [MQ] Logging Initialized (C:\actions-runner\_work\macroquest\macroquest\src\loader\MacroQuest.cpp:375)
+I 2026-05-27 20:58:08.302259 [MQ] Starting MacroQuest Loader. Built Sun Jan  4 18:57:00 2026 (C:\actions-runner\_work\macroquest\macroquest\src\loader\MacroQuest.cpp:1820)
+I 2026-05-27 20:58:08.302919 [MQ] I am a spawned process (C:\actions-runner\_work\macroquest\macroquest\src\loader\MacroQuest.cpp:1827)
+I 2026-05-27 20:58:08.311671 [MQ] Initializing crashpad handler (C:\actions-runner\_work\macroquest\macroquest\src\loader\Crashpad.cpp:139)
+D 2026-05-27 20:58:08.312015 [MQ] Handler Path: C:\GitHub\Everquest\Project Lazarus\crashpad_handler.exe (C:\actions-runner\_work\macroquest\macroquest\src\loader\Crashpad.cpp:140)
+I 2026-05-27 20:58:08.323864 [MQ] Crash report submission is: enabled (C:\actions-runner\_work\macroquest\macroquest\src\loader\Crashpad.cpp:145)
+I 2026-05-27 20:58:08.330467 [MQ] Crash report guid: e6d68656-336f-4ebb-880a-1d56ca95264f (C:\actions-runner\_work\macroquest\macroquest\src\loader\Crashpad.cpp:150)
+I 2026-05-27 20:58:08.330487 [MQ] Using shared crash reporter for all MacroQuest instances (C:\actions-runner\_work\macroquest\macroquest\src\loader\Crashpad.cpp:160)
+I 2026-05-27 20:58:08.476144 [MQ] MQ2Main Path: C:\GitHub\Everquest\Project Lazarus\MQ2Main.dll (C:\actions-runner\_work\macroquest\macroquest\src\loader\MacroQuest.cpp:1377)
+I 2026-05-27 20:58:09.032594 [MQ] Build: MacroQuest [May 10 2013 (Emu)] (C:\actions-runner\_work\macroquest\macroquest\src\loader\MacroQuest.cpp:1397)
+I 2026-05-27 20:58:09.041400 [MQ] PostOffice {launcher [7781]}: Starting Post Office on pipe \\.\pipe\mqpipe and port 7781 (C:\actions-runner\_work\macroquest\macroquest\src\routing\ServerPostOffice.cpp:55)
+I 2026-05-27 20:58:09.053988 [MQ] AutoLogin Opening database at C:\GitHub\Everquest\Project Lazarus\Config\login.db (C:\actions-runner\_work\macroquest\macroquest\src\login\Login.cpp:2565)
+I 2026-05-27 20:58:09.074270 [MQ] Process monitor using ToolHelp started (C:\actions-runner\_work\macroquest\macroquest\src\loader\ProcessMonitor.cpp:436)
+D 2026-05-27 20:58:09.074305 [MQ] Initializing injector (C:\actions-runner\_work\macroquest\macroquest\src\loader\ProcessList.cpp:1161)
+I 2026-05-27 20:58:09.081709 [MQ] Performing injections on any existing eqgame.exe processes (C:\actions-runner\_work\macroquest\macroquest\src\loader\ProcessList.cpp:703)
+D 2026-05-27 20:58:09.081873 [MQ] Injector thread started (C:\actions-runner\_work\macroquest\macroquest\src\loader\ProcessList.cpp:1054)
+D 2026-05-27 20:58:09.621364 [MQ] Message Box thread started: UPDATE AVAILABLE!
+
+You are running version: 3.1.4.4
+
+Current latest version: 3.1.4.7 (C:\actions-runner\_work\macroquest\macroquest\src\loader\Utility.cpp:75)
+I 2026-05-27 20:58:09.628103 [MQ] Waiting for events... (C:\actions-runner\_work\macroquest\macroquest\src\loader\MacroQuest.cpp:2039)
+D 2026-05-27 20:58:16.862685 [MQ] Message Box thread finished: UPDATE AVAILABLE!
+
+You are running version: 3.1.4.4
+
+Current latest version: 3.1.4.7 (C:\actions-runner\_work\macroquest\macroquest\src\loader\Utility.cpp:77)
+I 2026-05-27 20:58:20.291362 [MQ] Shutting down... (C:\actions-runner\_work\macroquest\macroquest\src\loader\MacroQuest.cpp:2064)
+D 2026-05-27 20:58:20.292284 [MQ] Injector thread finished (C:\actions-runner\_work\macroquest\macroquest\src\loader\ProcessList.cpp:1128)
+I 2026-05-27 20:58:20.292373 [MQ] PostOffice {launcher [7781]}: Shutting down post office (C:\actions-runner\_work\macroquest\macroquest\src\routing\ServerPostOffice.cpp:83)
+D 2026-05-27 20:58:20.293132 [MQ] Process Monitor Thread Exit (C:\actions-runner\_work\macroquest\macroquest\src\loader\ProcessMonitor.cpp:418)
